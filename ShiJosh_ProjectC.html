@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Project C</title>
+  </head>
+	<!--	Create the HTML5 'canvas' element in which we will run WebGL
+	-->
+  <style media="screen">
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .instructions {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 99;
+      color: white;
+      font-weight: lighter;
+    }
+
+    .instructions p {
+      max-width: 400px;
+    }
+
+  </style>
+  <body onload="main()" onresize="winResize()">
+    <div class="instructions">
+      <h1>Project C:<br>Forgive Me Father For I Have Sinned</h1>
+      <p>
+        Use W, S, A and D to move, the arrow keys to look around, and Q and E to increase/decrease altitude.
+      </p>
+      <p>
+        Use H to toggle headlamp.
+      </p>
+      <p>
+        Use J to toggle world lamp.
+      </p>
+      <p>
+        Click and drag to move the world lamp.
+      </p>
+      <p>
+        Adjust world lamp RGB values:
+      </p>
+      <p>
+        Ambient:
+        <p class='input-group'>
+          R:&nbsp;<input id='ambient-r' value=0.4 type="number" min=0.0 max=1.0 class="form-control" placeholder="">
+          G:&nbsp;<input id='ambient-g' value=0.4 type="number" min=0.0 max=1.0 class="form-control" placeholder="">
+          B:&nbsp;<input id='ambient-b' value=0.4 type="number" min=0.0 max=1.0 class="form-control" placeholder="">
+        </p>
+      </p>
+      <p>
+        Diffuse:
+        <p class='input-group'>
+          R:&nbsp;<input id='diffuse-r' value=1.0 type="number" min=0.0 max=1.0 class="form-control" placeholder="">
+          G:&nbsp;<input id='diffuse-g' value=1.0 type="number" min=0.0 max=1.0 class="form-control" placeholder="">
+          B:&nbsp;<input id='diffuse-b' value=1.0 type="number" min=0.0 max=1.0 class="form-control" placeholder="">
+        </p>
+      </p>
+      <p>
+        Specular:
+        <p class='input-group'>
+          R:&nbsp;<input id='specular-r' value=1.0 type="number" min=0.0 max=1.0 class="form-control" placeholder="">
+          G:&nbsp;<input id='specular-g' value=1.0 type="number" min=0.0 max=1.0 class="form-control" placeholder="">
+          B:&nbsp;<input id='specular-b' value=1.0 type="number" min=0.0 max=1.0 class="form-control" placeholder="">
+        </p>
+      </p>
+      <p>
+        Use G to toggle between Gouraud and Phong shading.
+      </p>
+      <p>
+        Use F to toggle between Blinn and Blinn-Phong lighting.
+      </p>
+    </div>
+    <div>
+      <canvas id="webgl" style='width: 100vw; height: 100vh;'>
+      Please use a browser that supports "canvas"
+      </canvas>
+    </div>
+
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/cuon-matrix.js"></script>
+    <script src="lib/cuon-matrix-mod.js"></script>
+    <script src="lib/cuon-matrix-quat.js"></script>
+    <script src="lights-JT.js"></script>
+    <script src="materials_Ayerdi.js"></script>
+    <script src="make-1.js"></script>
+    <script src="ShiJosh_ProjectC-1.js"></script>
+  </body>
+</html>
